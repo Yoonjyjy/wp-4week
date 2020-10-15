@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+  <title>4주차 레이아웃 과제</title>
+  <style>
+    * {
+      font-family: 'Song Myung', serif;
+    }
+
+    body {
+      margin: 0px;
+    }
+    .nav, .left, .right {
+      display: flex;
+      height: 80px;
+      align-items: center;
+    }
+
+    .nav {
+      border-bottom: 1px solid #dddddd;
+      background-color: #A1A0D0;
+      position: fixed;
+      width: 100%;
+    }
+
+    .left {
+      margin-right: auto;
+    }
+
+    .item {
+      margin: 0 20px;
+    }
+
+    .container {
+      display: grid;
+      /* grid-template-rows: repeat(4, 1fr); */
+      /* grid-template-rows: 20 40 20 20; */
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: 
+        "header header header"
+        "section1 section1 aside"
+        "image1 section2 section2"
+        "footer footer footer";
+      align-content: space-around;
+    }
+
+    .banner {
+      /* margin-top: 80px; */
+      margin: 80px 10px 20px;
+    }
+    .ban_title {
+      font-size: 2em;
+      border-top: 3px dashed #83601e;
+      padding-top: 30px;
+    }
+    .ban_content {
+      margin: auto;
+      text-align: center;
+      font-size: 1.2em;
+      background-color: orange;
+      border: 3px solid black;
+      border-radius: 20px;
+      height: 100px;
+      width: 300px;
+      padding-bottom: 20px;
+    }
+
+    header {
+      grid-area: header; background-color: #FFD104;
+    }
+    section1 {
+      grid-area: section1;
+      margin: 20px;
+    }
+    aside {
+      grid-area: aside;
+      margin: 20px;
+    }
+    section2 {
+      grid-area: section2;
+      margin: 20px;
+    }
+    footer {
+      grid-area: footer;
+      background-color: gray;
+      text-align: center;
+      margin: 10px;
+      height: 100px;
+    }
+    image1 {
+      grid-area: image1;
+
+    }
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <!-- <div>
+    <div class="parent">
+      <div class="child">Content 1</div>
+      <div class="child">Content 2</div>
+    </div>
+  </div> -->
+  <div class="nav">
+    <a href="./"><img src="./images/과제 로고.png" height="40" width="200"></a>
+    <div class="left">
+      <div class="item"><a href="#covid">코로나 19란?</a></div>
+      <div class="item"><a href="#covid2">코로나 증상</a></div>
+      <div class="item"><a href="#wash">올바른 손씻기</a></div>
+    </div>
+    <div class="right">
+      <div class="item"><a href="http://www.mohw.go.kr/react/index.jsp">중앙사고수습본부</a></div>
+      <div class="item"><a href="http://www.cdc.go.kr/">중앙방역대책본부</a></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="banner">
+        <img src="./images/배너1.png" alt="전국 2단계 거리 두기 1단계로 조정(10.12~)" width="100%">
+        
+        <div class="ban_title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 코로나 관련 최신 정보<br><br></div>
+
+        <div class="ban_content"> 
+          <a href="https://bit.ly/3dhBwgR"><br><br>전국 2단계 거리두기 1단계로 조정</a>
+        </div>
+      </div>
+    </header>
+
+    <section1>
+      <p id="covid"><b>코로나 19란?</b><br><br> 2019년 12월 중국 우한에서 처음 발생한 이후 중국 전역과 전 세계로 확산된, 새로운 유형의 코로나바이러스(SARS-CoV-2)에 의한 호흡기 감염질환이다. 코로나바이러스감염증-19는 감염자의 비말(침방울)이 호흡기나 눈·코·입의 점막으로 침투될 때 전염된다. 감염되면 약 2~14일(추정)의 잠복기를 거친 뒤 발열(37.5도) 및 기침이나 호흡곤란 등 호흡기 증상, 폐렴이 주증상으로 나타나지만 무증상 감염 사례 빈도도 높게 나오고 있다.</p>
+
+    </section1>
+
+    <aside>
+      <p id="covid2"><b>코로나의 증상</b><br><br>발열, 권태감, 기침, 호흡곤란 및 폐렴 등 경증에서 중증까지 다양한 호흡기감염증이 나타남. 그 외 가래, 인후통, 두통, 객혈과 오심, 설사 등도 나타난다.</p>
+
+    </aside>
+
+    <image1><img src="./images/이미지1.png" width="100%"> </image1>
+
+    <section2><p id="wash"><b>올바른 손씻기 6단계</b><br>
+    1. 손바닥과 손바닥을 마주대고 문지르기<br>
+    2. 손바닥과 손등을 마주대고 문지르기<br>
+    3. 손가락을 마주잡고 문질러주기<br>
+    4. 손바닥을 마주대고 손깍지를 낀채 문질러주기<br>
+    5. 엄지손가락을 다른 쪽 손으로 돌리며 문질러주기<br>
+    6. 손가락을 반대편 손바닥에 놓고 손톱 깨끗하게 만들기<br>
+    <br><br>
+    <b>비누를 사용해 30초간!</b><br><br>
+    매년 10월 15일은 UN이 지정한 '세계 손씻기의 날'입니다. 세계 손씻기의 날은 각종 감염병으로 인하여 도래되는 전 세계 어린이들의 희생을 줄이고자 지난 2008년 10월 15일 제정되었습니다. 이전부터 미국 질병예방통제센터(CDC)에서도 손씻기를 ‘셀프 백신’이라고 언급할 정도로 가장 쉽고 효과적인 예방법으로 강조한 바 있는데요. 손씻기는 예전부터 장티푸스, A형간염과 같은 장관감염증과 인플루엔자, 감기와 같은 호흡기 감염증을 예방할 수 있다는 특성이 있었는데요. 코로나19로 인하여 손씻기의 중요성인 더더욱 증가되었다고 해도 과언이 아닙니다. 보건복지부에 따르면 손을 통해 음식을 오염시킬 수 있는 대표적인 세균인 대장균을 이용한 실험에서 손을 씻지 않고 만지거나 조리한 음식물에서 손을 깨끗이 씻은 후 만진 음식보다 56배나 많은 세균이 검출되었다고 합니다.(출처 : 보건복지부 2019년 10월 14일 보도자료)
+    <br><br>우리가 손을 씻어 감염병 예방의 효과를 보기 위해서는 반드시 비누를 이용하여 30초 이상 씻어주어야 합니다.
+    </p>
+
+
+    </section2>
+
+    <footer><br><br>© 2017037037 윤지영 웹 응용 프로그래밍 4주차 과제</footer>
+
+  </div>
+  
+</body>
+</html>
